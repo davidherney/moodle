@@ -669,7 +669,7 @@ class auth_plugin_base {
                 $newuser = new stdClass();
                 $newuser->id = $userid;
                 // The cast to int is a workaround for MDL-53959.
-                if($user->suspended != (int)$suspenduser AND in_array('suspended', $updatekeys)) {
+                if ($user->suspended != (int)$suspenduser AND in_array('suspended', $updatekeys)) {
                     $newuser->suspended = (int) $suspenduser;
                     $needsupdate = true;
                 }
